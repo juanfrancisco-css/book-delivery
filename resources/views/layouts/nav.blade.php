@@ -36,6 +36,7 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
            @auth
+           <!--Si no existe el name muestra el username -->
            {{ auth()->user()->name ?? auth()->user()->username }}
            @endauth
            @guest
@@ -44,13 +45,15 @@
           
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{ route('suscribirse') }}">Crear Cuenta</a></li>
-            <li><a class="dropdown-item" href="{{ route('iniciar-sesión') }}">Iniciar Sesión</a></li>
-            <li><hr class="dropdown-divider"></li>
             @auth
-            <li><a class="dropdown-item" href=" ">Cerrar Sesión</a></li>
+            <li><a class="dropdown-item" href=" ">Mi Cuenta</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="{{ route('logout') }} ">Cerrar Sesión</a></li>
             @endauth
             @guest
+            <li><a class="dropdown-item" href="{{ route('registrarse') }}">Crear Cuenta</a></li>
+            <li><a class="dropdown-item" href="{{ route('iniciar-sesión') }}">Iniciar Sesión</a></li>
+            <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item disabled" href=" "  >Cerrar Sesión</a></li>
             @endguest
           </ul>

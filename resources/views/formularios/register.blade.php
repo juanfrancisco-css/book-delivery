@@ -15,33 +15,34 @@
 @include('layouts.nav')
 </header>
 <section>
-<form>
+<form action="{{ route('registrarse') }} " method="POST">
+  @csrf  <!-- Token es necesario -->
 <h1>Create una cuenta rápida y fácil</h1>
 <div class="form-floating mb-3">
-  <input type="text" class="form-control" id="username" placeholder="Nombre">
+  <input type="text" class="form-control" name="name" id="name" placeholder="Nombre">
   <label for="username">Nombre</label>
 </div>
 <div class="form-floating mb-3">
-  <input type="text" class="form-control" id="surname" placeholder="Apellidos">
+  <input type="text" class="form-control"  name="surname" id="surname" placeholder="Apellidos">
   <label for="surname">Apellidos</label>
 </div>
 <div class="form-floating mb-3">
-  <input type="email" class="form-control" id="email" placeholder="Email">
+  <input type="email" class="form-control"  name="email" id="email" placeholder="Email">
   <label for="email">Email</label>
 </div>
 <div class="form-floating mb-3">
-  <input type="email" class="form-control" id="username" placeholder="Nombre de Usuario">
+  <input type="text" class="form-control"   name="username" id="username" placeholder="Nombre de Usuario">
   <label for="username">Nombre de Usuario</label>
 </div>
 <div class="form-floating mb-3">
-  <input type="password" class="form-control" id="password" placeholder="Password">
+  <input type="password" class="form-control"  name="password" id="password" placeholder="Password">
   <label for="password">Password</label>
 </div>
 <div class="form-floating mb-3">
-  <input type="password" class="form-control" id="password" placeholder="Verificar Password">
+  <input type="password" class="form-control"   name="password_confirmation" id="password" placeholder="Verificar Password">
   <label for="password">Verificar Password</label>
 </div>
-<a href=" {{ route ('iniciar-sesión')}}">Ya tienes una cuenta </a>
+<a href=" {{ route ('iniciar-sesión')}}">Ya tienes una cuenta </a><br>
   <button type="submit" class="btn btn-primary">Craer Cuenta</button>
   
 </form>

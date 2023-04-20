@@ -16,19 +16,25 @@
 @include('layouts.nav')
 </header>
 <section>
-<form>
+<form action="" method="POST">
+  @csrf
 <h1>Bienvenido </h1>
 <p>Inicia sesión con nosotros para distrufar de todos nuestros servicios </p>
-
+@error('username')
+<h3>Nombre no existe </h3>
+@enderror
+@error('password')
+<h3>Nombre no existe </h3>
+@enderror
 <div class="form-floating mb-3">
-  <input type="email" class="form-control" id="email" placeholder="Email o Username">
-  <label for="email">Email o Username</label>
+  <input type="text" class="form-control"  name="username" id="username" placeholder="Email o Username">
+  <label for="username">Email o Username</label>
 </div>
 <div class="form-floating mb-3">
-  <input type="password" class="form-control" id="password" placeholder="Password">
+  <input type="password" class="form-control" name="password" id="password" placeholder="Password">
   <label for="password">Password</label>
 </div>
-<a href=" {{ route ('suscribirse')}}">Crear una cuenta </a><br>
+<a href=" {{ route ('registrarse')}}">Crear una cuenta </a><br>
   <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
 
 </form>
