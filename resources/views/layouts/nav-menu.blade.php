@@ -1,3 +1,4 @@
+<nav>
 <ul class="nav nav-underline menu-nav">
   <li class="nav-item">
     <a class="nav-link " aria-current="page" href="{{ route('inicio') }}">Inicio</a>
@@ -20,3 +21,4 @@
         </li>
 @endauth
 </ul>
+</nav>
