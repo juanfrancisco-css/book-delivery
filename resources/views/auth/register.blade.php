@@ -89,9 +89,11 @@
   <input type="password" class="form-control"   name="password_confirmation" id="password" placeholder="Verificar Password">
   <label for="password">Verificar Password</label>
 </div>
-<a href=" {{ route ('login')}}">Ya tienes una cuenta </a><br>
+
   <button type="submit" class="btn btn-primary">Craer Cuenta</button>
-  
+  <hr>
+<button type="button" class="btn btn-success"><a href=" {{ route ('login')}}" class="btn-register">Ya tienes una cuenta </a></button>
+
 </form>
 </section>
 <!-- fin del registro-->

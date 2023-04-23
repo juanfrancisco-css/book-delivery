@@ -1010,16 +1010,54 @@ a:focus {
 /*////////////////////////  Diseño del formulario Login \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 .form-login{
   padding: 5%;
+  width: 50%;
 }
+.form-login .btn-primary{
+  text-align: center;
+  width: 100%;
+}
+.form-login .btn-register{
+  text-decoration: none;
+  color:white;
+}
+.form-login .btn-register:hover{
+  color:white;
+}
+
 
 
 
 /*////////////////////////  Diseño del formulario Registro \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 .form-register{
   padding: 5%;
+  width: 50%;
 }
+.form-register .btn-register{
+  text-decoration: none;
+  color:white;
+}
+.form-register .btn-register:hover{
+  color:white;
+}
+
 
 /*////////////////////////  Diseño del formulario de datos \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
-.form-table{
+.form-table label{
+  margin-top: 4%;
+  
+  }
 
-}
+  .table-users{
+   /* margin-top: -18%;*/
+    margin-left: 25%;
+  }
+
+/*//////////////////////// Barra de navegacion de Users \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+  .nav-users{
+   
+    position: fixed;
+   
+  }
+
+
+  

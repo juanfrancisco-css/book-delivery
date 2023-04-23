@@ -47,7 +47,7 @@
   </div>
 
   <!-- formulario de login -->
-  <section class="form-login">
+  <section class="form-login  ">
 <form action="{{ route('login') }}" method="POST">
   @csrf
 <h1>Bienvenido  </h1>
@@ -71,8 +71,10 @@
   <input type="password" class="form-control" name="password" id="password" placeholder="Password">
   <label for="password">Password</label>
 </div>
-<a href=" {{ route ('registrarse')}}">Crear una cuenta </a><br>
+
   <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+<hr>
+<button type="button" class="btn btn-success"><a href=" {{ route ('registrarse')}}" class="btn-register" >Crear una cuenta </a></button>
 
 </form>
 </section>

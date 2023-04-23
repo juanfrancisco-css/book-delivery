@@ -44,13 +44,18 @@
   </div>
 
   <!-- food section -->
+<section class="nav-users">
+    @include('layouts.nav-users')
+</section>
 
-  <section class="layout_padding">
+  <section class="layout_padding table-users">
     <div class="container">
      
     @include('layouts.tabla_dato')
     </div>
   </section>
+
+
 
   <!-- end food section -->
 
