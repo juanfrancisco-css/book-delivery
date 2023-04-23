@@ -17,9 +17,9 @@ class RegisterController extends Controller
               /*
               Si existe un usuario ya autenticado no podra acceder al formulario de registro
               */
-              return redirect()->route('inicio');
+              return redirect()->route('index');
           }
-    return view('formularios.register'); //ruta 
+    return view('auth.register'); //ruta 
     }
 
            // utilizamos la clase de la carpeta Request 
@@ -44,7 +44,7 @@ class RegisterController extends Controller
     */
 
     //Para redireccionarla una vez creada la pagina se dirige a login 
-    return redirect ()->route('iniciar-sesión')->with('success','Cuenta Creada Exitosamente');
+    return redirect ()->route('login')->with('success','Cuenta Creada Exitosamente');
            
     }
 }

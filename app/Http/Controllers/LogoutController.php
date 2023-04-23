@@ -20,6 +20,6 @@ class LogoutController extends Controller
 
          Auth::logout(); //method que termina la sesión
     
-         return redirect()->route('registrarse');
+         return redirect()->route('login');
         }
 }

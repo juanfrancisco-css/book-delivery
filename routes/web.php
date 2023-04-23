@@ -20,21 +20,6 @@ use App\Http\Controllers\LogoutController; //importamos la libreria para poder u
 Route::get('/', function () {
     return view('welcome');
 });
-/*
-Route::get('/inicio', function () {              
-    return view('home.inicio');
-})->name('inicio');
-*/
-
-
-
-
-/*//////////////////////     Pagina de Bienvenida \\\\\\\\\\\\\\\\\\\\\\\\\\\*/ 
-
-Route::get('/book&delivery', function () {
-    return view('home.index');
-})->name('bienvenido');
-
 
 /*//////////////////////   Formularios   \\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 
@@ -42,8 +27,8 @@ Route::get('/book&delivery', function () {
 
                                   ////// Iniciar Sesion \\\\\
 
-Route::get('/iniciar sesión',[LoginController::class,'show'])->name('iniciar-sesión'); //visuaizar
-Route::post('/iniciar sesión',[LoginController::class,'login'])->name('iniciar-sesión'); //introducir 
+Route::get('/login',[LoginController::class,'show'])->name('login'); //visuaizar
+Route::post('/login',[LoginController::class,'login'])->name('login'); //introducir 
 
 
                         //////////// Registro  \\\\\\\\\\\
@@ -52,20 +37,44 @@ Route::post('/iniciar sesión',[LoginController::class,'login'])->name('iniciar-
                             toda la clase en si 
                     [RegisterController::class,'show']
 */
+
 Route::get('/Registrarse',[RegisterController::class,'show'])->name('registrarse');   //visualizar
 Route::post('/Registrarse',[RegisterController::class,'register'])->name('registrarse'); //introducir 
 
 //////////////////////////  Destruir la sesion \\\\\\\\\\\\\\\\\
+
 Route::get('/salir',[ LogoutController::class,'logout'])->name('logout');  
 
 
-/*//////////////////////     Pagina de Inicio \\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+////////////////// ///////   Pagina de Inicio \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-Route::get('/inicio',[HomeController::class,'index'])->name('inicio');
+Route::get('/book&delivery', function () {              
+    return view('index');
+})->name('index');
 
-/*//////////////////////     Paginas de Contenido  \\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 
-Route::get('/Contenido1', function () {              
-    return view('home.contenido1');
-})->name('contenido1');
+////////////////// ///////   Catalogo de comida \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+Route::get('/menu', function () {              
+    return view('menu');
+})->name('menu');
+
+
+////////////////// ///////   Pagina de Nosotros \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+Route::get('/sobrenosotros', function () {              
+    return view('about');
+})->name('about');
+
+
+////////////////// ///////   Formulario de Reservar\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+Route::get('/reserva', function () {              
+    return view('book');
+})->name('book');
+
+
+
+////////////////// ///////   Pagina de datos del usuario \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+Route::get('/book&delivary', function () {              
+    return view('user-dato');
+})->name('users');
 

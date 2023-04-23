@@ -16,9 +16,9 @@ class LoginController extends Controller
             /*
             Si existe un usuario ya autenticado no podra acceder al formulario de login
             */
-            return redirect()->route('inicio');
+            return redirect()->route('index');
         }
-        return view('formularios.login');
+        return view('auth.login');
     }
 
  //acceder 
@@ -32,7 +32,7 @@ class LoginController extends Controller
     if(!Auth::validate($credentials)){ //Si no existe este usuario 
 
         //redirige al login (se queda en la pagina y muestra mensajes de error)
-        return redirect()->to('/iniciar sesión')->withErrors('auth.failed');//  Error
+        return redirect()->route('login')->withErrors('auth.failed');//  Error
         
        
     }
@@ -49,7 +49,7 @@ class LoginController extends Controller
 
     public function authenticated(Request $request,$user){  //nombre reservado 
 
-        return redirect()->route('inicio');   //que me redirija a la pagina de incio 
+        return redirect()->route('index');   //que me redirija a la pagina de incio 
 
     }
 }

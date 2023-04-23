@@ -1,80 +1,76 @@
-<footer class="footer">
-  <div class="footer__addr">
-    <h1 class="footer__logo"></h1>
-        
-    <h2>Contacto</h2>
-    
-    <address>
-     Calle Empedrada 25 , 28042
-          
-      <a class="footer__btn" href="mailto:example@gmail.com">Email BookAndDelivery@gmail.com</a>
-    </address>
-  </div>
-  
-  <ul class="footer__nav">
-    <li class="nav__item">
-      <h2 class="nav__title">Cliente</h2>
-
-      <ul class="nav__ul">
-        <li>
-          <a href="#">Iniciar Sesion</a>
-        </li>
-
-        <li>
-          <a href="#">Restaurante</a>
-        </li>
-            
-        <li>
-          <a href="#">Pedidos</a>
-        </li>
-      </ul>
-    </li>
-    
-    <li class="nav__item nav__item--extra">
-      <h2 class="nav__title">Sobre Nosotros</h2>
-      
-      <ul class="nav__ul nav__ul--extra">
-        <li>
-          <a href="#">Donde Estamos</a>
-        </li>
-        
-        <li>
-          <a href="#">Nuestros Objetivos</a>
-        </li>
-        
-        <li>
-          <a href="#">Restaurante</a>
-        </li>
-        
-        
-      </ul>
-    </li>
-    
-    <li class="nav__item">
-      <h2 class="nav__title">Legal</h2>
-      
-      <ul class="nav__ul">
-        <li>
-          <a href="#">Privacy Policy</a>
-        </li>
-        
-        <li>
-          <a href="#">Terms of Use</a>
-        </li>
-        
-        <li>
-          <a href="#">Sitemap</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-  
-  <div class="legal">
-    <p>&copy; 2023 Software desarrollado por Book & Delivery</p>
-    <!--
-    <div class="legal__links">
-      <span>Made with <span class="heart">♥</span> remotely from Anywhere</span>
-    </div>
--->
-  </div>
-</footer>
+<div class="row">
+        <div class="col-md-4 footer-col">
+          <div class="footer_contact">
+            <h4>
+              Contacto
+            </h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                 Ubicación
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                 603 85 94 87
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  BookAndDelivery@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 footer-col">
+          <div class="footer_detail">
+            <a href="" class="footer-logo">
+              Book&Delivery
+            </a>
+            <p>
+              Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with
+           
+            </p>
+            <div class="footer_social">
+              <a href="">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-pinterest" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 footer-col">
+          <h4>
+           Horario
+          </h4>
+          <p>
+           Lunes-Domingo
+          </p>
+          <p>
+            10.00 Am - 23.00 Pm
+          </p>
+        </div>
+      </div>
+      <div class="footer-info">
+        <p>
+          &copy; <span id="displayYear"></span>Todos los derechos reservados
+          <a href="https://html.design/">Free Html Templates</a><br><br>
+          &copy; <span id="displayYear"></span> Desarrolado por 
+          <a href="#" target="_blank">Sergio y Juan</a>
+        </p>
+      </div>
